@@ -1,0 +1,176 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-container {
+    margin: 0 auto;
+    width: 66%;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+.multifilter {
+    position: relative;
+}
+
+.multifilter .multifilter-nice-label {
+    background: #e5e5e5;
+    display: block;
+    font-size: 12px;
+    margin: 0;
+    padding: 2px 13px;
+}
+
+.multifilter .multifilter-dropdown {
+    width: 100%;
+    position: relative;
+}
+
+.multifilter .multifilter-dropdown button {
+    width: 100%;
+    text-align: left;
+}
+
+.multifilter .multifilter-dropdown button span.caret {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+.multifilter .multifilter-dropdown > .multifilter-dropdown-menu::before {
+    position: absolute;
+    top: -8px;
+    left: 9px;
+    right: auto;
+    display: inline-block !important;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #e0e0e0;
+    border-left: 8px solid transparent;
+    content: '';
+}
+
+.multifilter .multifilter-dropdown > .multifilter-dropdown-menu::after {
+    position: absolute;
+    top: -7px;
+    left: 10px;
+    right: auto;
+    display: inline-block !important;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #fff;
+    border-left: 7px solid transparent;
+    content: '';
+}
+
+.multifilter .multifilter-dropdown .multifilter-dropdown-menu {
+    margin-top: 10px;
+    min-width: 175px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    text-shadow: none;
+    padding: 0;
+    margin: 10px 0 0;
+    background-color: #fff;
+    box-shadow: 5px 5px rgba(102,102,102,.1);
+    border: 1px solid #eee;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-clip: padding-box;
+}
+
+.multifilter .multifilter-dropdown .multifilter-dropdown-menu li {
+    list-style: none;
+    text-shadow: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.multifilter .multifilter-dropdown .multifilter-dropdown-menu li > a {
+    white-space: pre-wrap !important;
+    padding: 0;
+    color: #555;
+    text-decoration: none;
+    display: block;
+    clear: both;
+    font-weight: 300;
+    line-height: 18px;
+    white-space: nowrap;
+    font-size: 14px;
+    text-align: left;
+    cusrsor: pointer;
+}
+
+.multifilter .multifilter-dropdown .multifilter-dropdown-menu li a label {
+    margin: 0px !important;
+    padding: 8px 30px;
+    display: block !important;
+    cursor: pointer;
+    position: relative;
+}
+
+.multifilter .multifilter-dropdown .multifilter-dropdown-menu li a label input {
+    position: absolute;
+    margin: 2px 0 0 -20px;
+}
+
+.multifilter .multifilter-dropdown .multifilter-dropdown-menu .divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background: #f1f3f6;
+}
+
+.multifilter .multifilter-dropdown .multifilter-dropdown-menu li > a:hover {
+    text-decoration: none;
+    background-image: none;
+    background-color: #f6f6f6;
+    color: #555;
+    filter: none;
+}
+
+.multifilter .multifilter-dropdown .multifilter-dropdown-menu.active {
+    display: block;
+}
+
+.multifilter .multifilter-dropdown button {
+    border-color: #e5e5e5 !important;
+    height: 40px;
+    font-size: 13px;
+}
+
+.multifilter .multifilter-dropdown .btn-default {
+    border-color: #e5e5e5 !important;
+}
+
+.multifilter .multifilter-dropdown .btn-default.multifilter-btn-on {
+    color: #333;
+    background-color: #ededed;
+}
