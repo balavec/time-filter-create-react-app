@@ -5,7 +5,7 @@ import { connect } from "react-redux"
 import MultiFilterButton from "./MultiFilterButton";
 import MultiFilterList from "./MultiFilterList";
 
-import { setFilterTimePeriodValue } from "../../actions/filterTimePeriodActions";
+import { setMultifilterValue } from "../../actions/filterMultifilterActions";
 
 import _ from 'lodash'
 
@@ -21,8 +21,8 @@ class MultiFilterContainer extends React.Component {
     }
 
     handleButtonTitle() {
-        const currentValue = parseInt(this.props.time_period.value, 10);
-        var filtered = _.filter(this.props.time_period.options, function(item) {
+        const currentValue = parseInt(this.props.item.value, 10);
+        var filtered = _.filter(this.props.item.options, function(item) {
             return item.value === currentValue
         });
 
@@ -47,9 +47,9 @@ class MultiFilterContainer extends React.Component {
             active: !currentState,
         });
 
-        this.props.dispatch(setFilterTimePeriodValue(currentValue));
+        this.props.dispatch(setMultifilterValue(this.props.index, currentValue));
 
-        var filtered = _.filter(this.props.time_period.options, function(item) {
+        var filtered = _.filter(this.props.item.options, function(item) {
             return item.value === currentValue
         });
 
@@ -82,15 +82,12 @@ class MultiFilterContainer extends React.Component {
         return (
             <div className={this.state.class_name}>
                 <MultiFilterButton active={this.state.active} title={this.state.button_title} handleButton={this.handleButton.bind(this)} />
-                <MultiFilterList active={this.state.active} options={this.props.time_period} handleChange={this.handleChange.bind(this)} />
+                <MultiFilterList active={this.state.active} item={this.props.item} handleChange={this.handleChange.bind(this)} />
             </div>
         );
     }
 }
 
-
 export default connect((store) => {
-    return {
-        time_period: store.filter_time_period.time_period
-    }
+    return {}
 })(MultiFilterContainer);

@@ -25,10 +25,15 @@ export default function reducer(state = {
         }
 
         case "SET_MULTIFILTER_VALUE": {
+
+            const updated_index = {...state.multifilter[action.index], value: action.payload};
+            const multifilter = [...state.multifilter.slice(0, action.index), updated_index, ...state.multifilter.slice(action.index + 1)];
+
             return {
                 ...state,
-                multifilter: {...state.multifilter, value: action.payload},
+                multifilter: multifilter,
             }
+
         }
 
         default: {}

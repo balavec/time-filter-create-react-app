@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 import logo from './logo.svg';
 import './App.css';
 import MultiFilter from "./components/MultiFilter";
-import MultiFilterLabel from "./components/MultiFilter/MultiFilterLabel";
+import SmartLabel from "./components/SmartLabel";
 import { fetchMultifilterPeriod } from "./actions/filterMultifilterActions";
 
 
@@ -13,6 +13,7 @@ class App extends Component {
   }
 
   render() {
+
     return (
       <div className="App">
         <header className="App-header">
@@ -24,9 +25,11 @@ class App extends Component {
             To get started, edit <code>src/App.js</code> and save to reload.
           </p>
           <div id="react-multifilter">
-            <MultiFilter />
+            <div className="row">
+            {this.props.multifilter.map((item, key) => <div className="col-md-6"><MultiFilter key={key} index={key} item={item} /><br /></div>)}
+            </div>
             <div className="App-labels">
-              {this.props.multifilter.map((item, key) => <MultiFilterLabel key={key} title={item.title} />)}
+            {this.props.multifilter.map((item, key) => <SmartLabel key={key} index={key} item={item} />)}
             </div>
           </div>
         </div>

@@ -14,7 +14,7 @@ export default class MultiFilterList extends React.Component {
     render() {
         return (
             <ul className={this.props.active ? this.state.class_name_active : this.state.class_name}>
-                {this.props.options.options.map((item, key) => <MultiFilterRadioOption key={key} title={item.title} value={item.value} checked={this.props.options.value === item.value ? 'checked' : ''} handleChange={this.props.handleChange} />)}
+                {this.props.item.options.map((item, key) => <MultiFilterRadioOption key={key} title={item.title} value={item.value} checked={this.props.item.value === item.value ? 'checked' : ''} handleChange={this.props.handleChange} />)}
             </ul>
         );
     }

@@ -8,9 +8,10 @@ export function fetchMultifilterPeriod() {
     }
 }
 
-export function setMultifilterValue(value) {
+export function setMultifilterValue(index, value) {
     return {
         type: "SET_MULTIFILTER_VALUE",
+        index: index,
         payload: value
     }
 }
