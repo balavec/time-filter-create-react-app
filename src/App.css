@@ -27,6 +27,17 @@
   font-size: large;
 }
 
+.App-labels {
+  padding: 20px 0;
+}
+
+.App-labels label {
+  display: block;
+  padding: 5px;
+  margin: 0 0 5px;
+  border: 1px solid silver;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
