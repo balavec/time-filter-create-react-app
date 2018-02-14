@@ -26,7 +26,7 @@ class App extends Component {
           </p>
           <div id="react-multifilter">
             <div className="row">
-            {this.props.multifilter.map((item, key) => <div className="col-md-6"><MultiFilter key={key} index={key} item={item} /><br /></div>)}
+            {this.props.multifilter.map((item, key) => <div key={key} className="col-md-6"><MultiFilter key={key} index={key} item={item} /><br /></div>)}
             </div>
             <div className="App-labels">
             {this.props.multifilter.map((item, key) => <SmartLabel key={key} index={key} item={item} />)}

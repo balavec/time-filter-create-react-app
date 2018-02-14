@@ -16,20 +16,23 @@ class MultiFilterContainer extends React.Component {
         this.state = {
             active: false,
             class_name: "multifilter-dropdown",
-            button_title: ''
+            button_title: 'None selected'
         };
     }
 
     handleButtonTitle() {
         const currentValue = parseInt(this.props.item.value, 10);
-        var filtered = _.filter(this.props.item.options, function(item) {
-            return item.value === currentValue
-        });
 
-        const title = filtered[0].title;
-        this.setState({
-            button_title: title
-        });
+        if(!isNaN(currentValue)) {
+          var filtered = _.filter(this.props.item.options, function(item) {
+              return item.value === currentValue
+          });
+
+          const title = filtered[0].title;
+          this.setState({
+              button_title: title
+          });
+        }
     }
 
     handleButton(event) {

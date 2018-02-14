@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
@@ -21,66 +22,71 @@
     -->
     <title>React App</title>
     <script>
-      show_filters_json = [
-        {
-            key: "time_period",
-            title: "Time Period",
-            value: 1,
-            options: [
-                {
-                    title: 'Most Recent Month',
-                    value: 1
-                },
-                {
-                    title: 'Most Recent 3 Months',
-                    value: 2
-                },
-                {
-                    title: 'Most Recent 12 Months',
-                    value: 3
-                },
-                {
-                    title: 'Year to Date',
-                    value: 0
-                }
-            ]
-        },
-        {
+        var show_filters_json = [{
             key: "drg",
             title: "DRG",
+            multiselect: false,
             value: 470,
-            options: [
-                {
-                    title: 'Major Joint Replacement or Reattachment of Lower Extremity W/O MCC',
-                    value: 470
-                },
-                {
-                  title: 'Major Joint Replacement or Reattachment of Lower Extremity W MCC',
-                  value: 469
-                },
-                {
-                    title: 'Spinal Fusion Except Cervical W/O MCC',
-                    value: 460
-                }
-            ]
-        }
-      ];
+            options: [{
+                title: '470 (Major Joint Replacement or Reattachment of Lower Extremity W/O MCC)',
+                value: 470
+            }, {
+                title: '469 (Major Joint Replacement or Reattachment of Lower Extremity W MCC)',
+                value: 469
+            }, {
+                title: '460 (Spinal Fusion Except Cervical W/O MCC)',
+                value: 460
+            }]
+        }, {
+            key: "level_care",
+            title: "Level of Care",
+            multiselect: false,
+            value: 1,
+            options: [{
+                title: 'Level 1',
+                value: 1
+            }, {
+                title: 'Level 2',
+                value: 2
+            }, {
+                title: 'Level 3',
+                value: 3
+            }]
+        }, {
+            key: "time_period",
+            title: "Time Period",
+            multiselect: false,
+            value: 1,
+            options: [{
+                title: 'Most Recent Month',
+                value: 1
+            }, {
+                title: 'Most Recent 3 Months',
+                value: 2
+            }, {
+                title: 'Most Recent 12 Months',
+                value: 3
+            }, {
+                title: 'Year to Date',
+                value: 0
+            }]
+        }];
     </script>
-  </head>
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+        This HTML file is a template.
+        If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+        You can add webfonts, meta tags, or analytics to this file.
+        The build step will place the bundled scripts into the <body> tag.
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+        To begin the development, run `npm start` or `yarn start`.
+        To create a production bundle, use `npm run build` or `yarn build`.
+      -->
+</body>
+
 </html>
