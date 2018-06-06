@@ -38,8 +38,8 @@ class App extends Component {
   }
 }
 
-export default connect((store) => {
-    return {
-        multifilter: store.filter_multifilter.multifilter
-    }
-})(App);
+function mapStateToProps(state) {
+  return { multifilter: state.filter_multifilter.multifilter };
+}
+
+export default connect(mapStateToProps)(App);
